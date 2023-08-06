@@ -20,6 +20,20 @@
     <!-- Header -->
     <header class="header">
         <div class="container">
+            <!-- <nav role="navigation" class="navigation">
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                        <li><a class="menu__links" href="#">Home</a></li>
+                        <li><a class="menu__links" href="#">About</a></li>
+                        <li><a class="menu__links" href="#">Info</a></li>
+                        <li><a class="menu__links" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav> -->
             <div class="header__menu">
                 <div class="header__mobile__menu__icon">
                     <img src="./image/menu/icon-menu.svg" id="open" onclick="openMenu()" alt="openMenu">
@@ -297,16 +311,27 @@
     <!-- Footer End -->
 
     <script>
-        function openMenu() {
-            document.getElementById("SideMenu").style.display = "block";
-            document.getElementById('open').style.display = "none";
-            document.getElementById('close').style.display = "block";
-        }
+        // function openMenu() {
+        //     document.getElementById("SideMenu").style.display = "block";
+        //     document.getElementById('open').style.display = "none";
+        //     document.getElementById('close').style.display = "block";
+        // }
 
+        // function closeMenu() {
+        //     document.getElementById("SideMenu").style.display = "none";
+        //     document.getElementById('open').style.display = "block";
+        //     document.getElementById('close').style.display = "none";
+        // }
+
+        function openMenu() {
+            document.getElementById('SideMenu').style.left = "0";
+            document.getElementById('close').style.display = "block";
+            document.getElementById('open').style.display = "none";
+        }
         function closeMenu() {
-            document.getElementById("SideMenu").style.display = "none";
-            document.getElementById('open').style.display = "block";
+            document.getElementById('SideMenu').style.left = "-100%";
             document.getElementById('close').style.display = "none";
+            document.getElementById('open').style.display = "block";
         }
     </script>
 </body>
